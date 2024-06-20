@@ -1,14 +1,25 @@
+import React, { useEffect } from "react"
+
+interface pageSettings{
+  title : string
+  content : React.ReactNode
+}
 
 
-function App() :JSX.Element {
+function App({title, content} : pageSettings) :JSX.Element {
 
+  useEffect(()=>{
+    if(title){
+      document.title = title
+    }
+  })
 
   return (
-    <body >
+    <>
 
-      <div className="text-5xl">Hello World</div>
+      {content}
       
-    </body>
+    </>
   )
 }
 
