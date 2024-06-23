@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 
 interface pageSettings{
   title : string
@@ -6,13 +6,12 @@ interface pageSettings{
 }
 
 
-function App({title, content} : pageSettings) :JSX.Element {
-
-  useEffect(()=>{
-    if(title){
-      document.title = title
-    }
-  })
+export function App({title, content} : pageSettings) :JSX.Element {
+  
+    
+  document.title = title
+    
+  
 
   return (
     <>
@@ -22,5 +21,3 @@ function App({title, content} : pageSettings) :JSX.Element {
     </>
   )
 }
-
-export default App

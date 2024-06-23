@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import { App } from './App.tsx'
 import './index.css'
 import { createHashRouter, RouterProvider } from 'react-router-dom'
 import { Index } from './pages/index.tsx'
 
 const router = createHashRouter([{
   path: "/",
-  element: <Index/>,
+  element: App({content : Index(), title : "asd"}),
   errorElement: (<>404</>)
 }])
 
