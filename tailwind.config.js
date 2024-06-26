@@ -1,10 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}", 'node_modules/flowbite-react/lib/esm/**/*.js'],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'wiggle': "url('./wiggle.svg')"
+      }
+    },
   },
-  plugins: [],
+  plugins: [require('flowbite/plugin')],
   future: {
     hoverOnlyWhenSupported: true,
   },

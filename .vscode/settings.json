@@ -9,7 +9,7 @@
     "**/node_modules": true,
     "**/.gitignore": true,
     "**/package-lock.json": true,
-    "**/package.json": true,
+    "**/package.json": false,
     "**/*.js.map": true,
     "**/vite-env.d.ts": true,
     "README.md": false,
