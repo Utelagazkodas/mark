@@ -31,7 +31,7 @@ export function App({ title, content }: pageSettings): React.ReactNode {
 
 
   return (
-    <div className="overflow-x-hidden pt-16 font-mono">
+    <div className="font-mono  overflow-x-hidden">
       {content}
     </div>
   )
