@@ -16,3 +16,11 @@
   :root {
     color-scheme: dark;
   }
+
+.bg-index{
+  transform: translateZ(-10000);
+}
+
+.fg-index{
+  transform: translateZ(10000);
+}
