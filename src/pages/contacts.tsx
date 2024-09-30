@@ -7,6 +7,6 @@ export function Contacts() : React.ReactNode{
 
     return (<>
     <Topbar/>
-    contacts
+    <div className="pt-16 w-screen min-h-screen">contacts</div>
     </>)
 }
