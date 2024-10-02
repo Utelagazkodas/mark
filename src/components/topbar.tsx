@@ -14,7 +14,7 @@ import {
     NavigationMenuViewport,
 } from "./ui/navigation-menu"
 
-import { Button } from "@/src/components/*/ui/button";
+import { Button } from "./ui/button";
 
 export function Topbar(): React.ReactNode {
     // create lang
@@ -50,26 +50,36 @@ export function Topbar(): React.ReactNode {
     }, [])
     // ---
 
-    return (<div className="fixed top-0 flex flex-row w-screen text-medium  px-20 h-16 backdrop-blur-sm bg-slate-700 border-b-[3px] border-slate-700 z-10" style={{ backgroundColor: `rgba(64, 64, 64, ${opacity})` }}>
+    return (<div className="fixed top-0 flex flex-row w-screen text-medium  px-20 h-14 backdrop-blur-md bg-primary border-b-[3px] border-border z-10" style={{ backgroundColor: `rgba(248, 250, 252, ${opacity})` }}>
         <a className="flex items-center text-5xl" href="/#" title={getData(lang, "top-main-title")}>
-            <TiScissorsOutline className="p-1 transition-all hover:bg-white hover:text-slate-500 rounded-2xl" />
+            <TiScissorsOutline className="p-1 transition-all hover:bg-primary-foreground hover:text-primary text-primary-foreground rounded-2xl" />
         </a>
         <div className="flex items-center flex-grow p-3 text-lg text-center place-content-center">
-            <a href="/#contacts" className=" hover:bg-slate-200 px-2 py-1 rounded-xl transition-all hover:text-slate-700 tracking-tighter hover:tracking-normal duration-200" title={getData(lang, "contacts-title")}>
-                {getData(lang, "contact")}
-            </a>
 
-            <Button></Button>
+
+
+
 
             <NavigationMenu>
                 <NavigationMenuList>
-                    <NavigationMenuItem>
-                        <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                            <div className="text-medium w-11 h-11">
 
-                            </div>
+                    <NavigationMenuItem>
+                        <NavigationMenuTrigger className="bg-transparent rounded-xl text-primary-foreground text-base tracking-tighter max-h-8 py-1">
+                            Projects
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent className="text-medium h-[8vw] bg-primary rounded-xl text-primary-foreground border">
+                            
+                                asdasd
+                           
                         </NavigationMenuContent>
+                    </NavigationMenuItem>
+
+                    <NavigationMenuItem>
+                        
+                            <a href="/#contacts" className="hover:bg-primary-foreground text-base text-primary-foreground font-medium px-2 py-1 rounded-xl transition-all hover:text-primary tracking-tighter duration-200 max-h-8" title={getData(lang, "contacts-title")}>
+                                {getData(lang, "contact")}
+                            </a>
+                       
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
