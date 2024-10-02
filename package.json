@@ -12,6 +12,7 @@
   "dependencies": {
     "@fontsource/roboto": "^5.1.0",
     "@karibash/pixel-units": "^2.3.0",
+    "@radix-ui/react-aspect-ratio": "^1.1.0",
     "@radix-ui/react-navigation-menu": "^1.2.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@types/react-icons": "^3.0.0",
