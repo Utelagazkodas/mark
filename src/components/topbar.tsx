@@ -59,13 +59,15 @@ export function Topbar(): React.ReactNode {
 
 
             <NavigationMenu >
+            
+
                 <NavigationMenuList>
                    
                     <NavigationMenuItem>
                         <NavigationMenuTrigger className="bg-transparent rounded-xl text-secondary-foreground text-base tracking-tighter max-h-9 hover:bg-transparent hover:text-secondary-foreground focus:bg-transparent focus:text-secondary-foreground data-[active]:bg-transparent data-[state=open]:bg-secondary-foreground data-[state=open]:text-secondary pr-0.5 pl-2 -mx-0.5">
                             Projects
                         </NavigationMenuTrigger>
-                        <NavigationMenuContent className="border-2 border-primary backdrop-blur-3xl text-medium py-1 bg-secondary rounded-xl text-slate-400 overflow-hidden flex flex-col text-left px-2 text-base transition-all">
+                        <NavigationMenuContent className="border-2 border-r-4 border-primary backdrop-blur-3xl text-medium py-1 bg-secondary rounded-xl text-slate-400 overflow-hidden flex flex-col text-left px-2 text-base transition-all">
 
                             
                                 <NavigationMenuLink href="#projects/fashion" className="hover:text-secondary-foreground">Fashion</NavigationMenuLink>
@@ -96,6 +98,9 @@ export function Topbar(): React.ReactNode {
                        
                     </NavigationMenuItem>
                 </NavigationMenuList>
+
+                <NavigationMenuViewport />
+
             </NavigationMenu>
 
         </div>

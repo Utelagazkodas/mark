@@ -16,6 +16,9 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        'wiggle': "url('./wiggle.svg')"
+      },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
       },
