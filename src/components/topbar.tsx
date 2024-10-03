@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { TiScissorsOutline } from "react-icons/ti";
+import { TiScissorsOutline, TiGlobeOutline } from "react-icons/ti";
 import ReactCountryFlag from "react-country-flag";
 import { changeLanguage, changeLanguageFunctions, currentLanguage, getData, getOtherLanguage, languages } from "../utility/language";
 
@@ -13,8 +13,6 @@ import {
     NavigationMenuTrigger,
     NavigationMenuViewport,
 } from "./ui/navigation-menu"
-
-import { Button } from "./ui/button";
 
 export function Topbar(): React.ReactNode {
     // create lang
@@ -50,9 +48,9 @@ export function Topbar(): React.ReactNode {
     }, [])
     // ---
 
-    return (<div className="fixed top-0 flex flex-row w-screen text-medium h-14 backdrop-blur-md bg-primary border-b-[3px] border-border z-10" style={{ backgroundColor: `rgba(248, 250, 252, ${opacity})` }}>
-        <a className="flex-1 flex items-center text-5xl place-content-center" href="/#" title={getData(lang, "top-main-title")}>
-            <TiScissorsOutline className="p-1 transition-all hover:bg-primary-foreground hover:text-primary text-primary-foreground rounded-2xl" />
+    return (<div className="fixed top-0 flex flex-row w-screen text-medium text-secondary-foreground h-12 backdrop-blur-md bg-secondary border-b-[3px] z-10" style={{ backgroundColor: `rgba(30, 41, 59, ${opacity})` }}>
+        <a className="flex-1 flex items-center  place-content-start" href="/#" title={getData(lang, "top-main-title")}>
+            <TiScissorsOutline className="p-0.5 text-[2.5rem] transition-all hover:bg-secondary-foreground hover:text-secondary text-secondary-foregroundS rounded-2xl translate-x-4" />
         </a>
         <div className="flex-1 flex items-center flex-grow p-3 text-lg text-center place-content-center">
 
@@ -60,31 +58,39 @@ export function Topbar(): React.ReactNode {
 
 
 
-            <NavigationMenu>
-                <NavigationMenuList >
-
+            <NavigationMenu >
+                <NavigationMenuList>
+                   
                     <NavigationMenuItem>
-                        <NavigationMenuTrigger className="bg-transparent rounded-xl text-primary-foreground text-base tracking-tighter max-h-8 py-1 hover:bg-transparent hover:text-primary-foreground focus:bg-transparent focus:text-primary-foreground data-[active]:bg-transparent data-[state=open]:bg-transparent">
+                        <NavigationMenuTrigger className="bg-transparent rounded-xl text-secondary-foreground text-base tracking-tighter max-h-9 hover:bg-transparent hover:text-secondary-foreground focus:bg-transparent focus:text-secondary-foreground data-[active]:bg-transparent data-[state=open]:bg-secondary-foreground data-[state=open]:text-secondary pr-0.5 pl-2 -mx-0.5">
                             Projects
                         </NavigationMenuTrigger>
-                        <NavigationMenuContent className="text-medium h-[8vw] bg-primary rounded-xl text-primary-foreground border">
+                        <NavigationMenuContent className="border-2 border-primary backdrop-blur-3xl text-medium py-1 bg-secondary rounded-xl text-slate-400 overflow-hidden flex flex-col text-left px-2 text-base transition-all">
+
                             
-                                asdasd
+                                <NavigationMenuLink href="#projects/fashion" className="hover:text-secondary-foreground">Fashion</NavigationMenuLink>
+                                <hr className="border-slate-700 mx-2"/>
+                                <NavigationMenuLink href="#projects/commercials" className="hover:text-secondary-foreground">Commercials</NavigationMenuLink>
+                                <hr className="border-slate-700 mx-2"/>
+                                <NavigationMenuLink href="#projects/films" className="hover:text-secondary-foreground">Films</NavigationMenuLink>
+                            
+                            
                            
                         </NavigationMenuContent>
                     </NavigationMenuItem>
 
                     <NavigationMenuItem>
                         
-                            <a href="/#contacts" className="hover:bg-primary-foreground text-base text-primary-foreground font-medium px-2 py-1 rounded-xl transition-all hover:text-primary tracking-tighter duration-200 max-h-8" title={getData(lang, "contacts-title")}>
+                            <a href="/#contacts" className="hover:bg-secondary-foreground text-base text-secondary-foreground font-medium px-2 mx-1 py-2 rounded-xl transition-all hover:text-secondary tracking-tighter duration-200 max-h-8" title={getData(lang, "contacts-title")}>
                                 {getData(lang, "contact")}
                             </a>
+                            
                        
                     </NavigationMenuItem>
 
                     <NavigationMenuItem>
                         
-                            <a href="/#contacts" className="hover:bg-primary-foreground text-base text-primary-foreground font-medium px-2 py-1 rounded-xl transition-all hover:text-primary tracking-tighter duration-200 max-h-8" title={getData(lang, "about-title")}>
+                            <a href="/#contacts" className="hover:bg-secondary-foreground text-base text-secondary-foreground font-medium px-2 py-2 rounded-xl transition-all hover:text-secondary tracking-tighter duration-200 max-h-8" title={getData(lang, "about-title")}>
                                 {getData(lang, "about")}
                             </a>
                        
@@ -96,8 +102,10 @@ export function Topbar(): React.ReactNode {
 
 
 
-        <div className="flex-1 flex items-center text-center place-content-center">
-            <ReactCountryFlag countryCode={languages[getOtherLanguage(lang)]} svg className="text-center transition-all text-5xl hover:cursor-pointer" title={getData(lang, "top-flag-title")} onClick={changeLanguage} />
+        <div className="flex-1 flex items-center text-center place-content-end">
+            { /* <ReactCountryFlag countryCode={languages[getOtherLanguage(lang)]} svg className="text-center transition-all text-5xl hover:cursor-pointer -translate-x-7" title={getData(lang, "top-flag-title")} onClick={changeLanguage} /> */}
+
+            <TiGlobeOutline className="p-0.5 text-4xl transition-all hover:bg-secondary-foreground hover:text-secondary text-secondary-foregroundS rounded-2xl -translate-x-6" title={getData(lang, "top-flag-title")} onClick={changeLanguage}/>
         </div>
     </div>)
 }   
