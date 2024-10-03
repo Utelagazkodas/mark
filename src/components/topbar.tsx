@@ -50,21 +50,21 @@ export function Topbar(): React.ReactNode {
     }, [])
     // ---
 
-    return (<div className="fixed top-0 flex flex-row w-screen text-medium  px-20 h-14 backdrop-blur-md bg-primary border-b-[3px] border-border z-10" style={{ backgroundColor: `rgba(248, 250, 252, ${opacity})` }}>
-        <a className="flex items-center text-5xl" href="/#" title={getData(lang, "top-main-title")}>
+    return (<div className="fixed top-0 flex flex-row w-screen text-medium h-14 backdrop-blur-md bg-primary border-b-[3px] border-border z-10" style={{ backgroundColor: `rgba(248, 250, 252, ${opacity})` }}>
+        <a className="flex-1 flex items-center text-5xl place-content-center" href="/#" title={getData(lang, "top-main-title")}>
             <TiScissorsOutline className="p-1 transition-all hover:bg-primary-foreground hover:text-primary text-primary-foreground rounded-2xl" />
         </a>
-        <div className="flex items-center flex-grow p-3 text-lg text-center place-content-center">
+        <div className="flex-1 flex items-center flex-grow p-3 text-lg text-center place-content-center">
 
 
 
 
 
             <NavigationMenu>
-                <NavigationMenuList>
+                <NavigationMenuList >
 
                     <NavigationMenuItem>
-                        <NavigationMenuTrigger className="bg-transparent rounded-xl text-primary-foreground text-base tracking-tighter max-h-8 py-1">
+                        <NavigationMenuTrigger className="bg-transparent rounded-xl text-primary-foreground text-base tracking-tighter max-h-8 py-1 hover:bg-transparent hover:text-primary-foreground focus:bg-transparent focus:text-primary-foreground data-[active]:bg-transparent data-[state=open]:bg-transparent">
                             Projects
                         </NavigationMenuTrigger>
                         <NavigationMenuContent className="text-medium h-[8vw] bg-primary rounded-xl text-primary-foreground border">
@@ -81,6 +81,14 @@ export function Topbar(): React.ReactNode {
                             </a>
                        
                     </NavigationMenuItem>
+
+                    <NavigationMenuItem>
+                        
+                            <a href="/#contacts" className="hover:bg-primary-foreground text-base text-primary-foreground font-medium px-2 py-1 rounded-xl transition-all hover:text-primary tracking-tighter duration-200 max-h-8" title={getData(lang, "about-title")}>
+                                {getData(lang, "about")}
+                            </a>
+                       
+                    </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
 
@@ -88,7 +96,7 @@ export function Topbar(): React.ReactNode {
 
 
 
-        <div className="flex items-center text-center">
+        <div className="flex-1 flex items-center text-center place-content-center">
             <ReactCountryFlag countryCode={languages[getOtherLanguage(lang)]} svg className="text-center transition-all text-5xl hover:cursor-pointer" title={getData(lang, "top-flag-title")} onClick={changeLanguage} />
         </div>
     </div>)

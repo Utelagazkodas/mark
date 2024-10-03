@@ -17,5 +17,9 @@
    "top-flag-title" : "Válts Magyarra!",
    "top-main-title" : "The main page",
    "top-works" : "My works",
-   "404-title" : "404 can't find page"
+   "404-title" : "404 can't find page",
+
+
+   "about": "About",
+   "about-title": "About me"
 }
