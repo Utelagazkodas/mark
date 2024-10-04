@@ -11,6 +11,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import { About } from './pages/about.tsx'
 
 async function initializeApp() {
   await initializeLanguages()
@@ -22,6 +23,9 @@ async function initializeApp() {
   },{
     path: "/contacts",
     element: (<App title='contacts-title' content={<Contacts/>}  />)
+  },{
+    path: "/about",
+    element: (<App title='about-title' content={<About/>}  />)
   }])
 
   ReactDOM.createRoot(document.getElementById('root')!).render(

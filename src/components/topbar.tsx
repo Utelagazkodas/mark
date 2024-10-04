@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { TiScissorsOutline, TiGlobeOutline } from "react-icons/ti";
-import ReactCountryFlag from "react-country-flag";
-import { changeLanguage, changeLanguageFunctions, currentLanguage, getData, getOtherLanguage, languages } from "../utility/language";
+import { changeLanguage, changeLanguageFunctions, currentLanguage, getData } from "../utility/language";
 
 import {
     NavigationMenu,
     NavigationMenuContent,
-    NavigationMenuIndicator,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
@@ -48,7 +46,7 @@ export function Topbar(): React.ReactNode {
     }, [])
     // ---
 
-    return (<div className="fixed top-0 flex flex-row w-screen text-medium text-secondary-foreground h-12 backdrop-blur-md bg-secondary border-b-[3px] z-10" style={{ backgroundColor: `rgba(30, 41, 59, ${opacity})` }}>
+    return (<div className="fixed top-0 flex flex-row w-screen text-medium text-secondary-foreground h-12 backdrop-blur-sm bg-secondary border-b-[3px] z-10" style={{ backgroundColor: `rgba(30, 41, 59, ${opacity})` }}>
         <a className="flex-1 flex items-center  place-content-start" href="/#" title={getData(lang, "top-main-title")}>
             <TiScissorsOutline className="p-0.5 text-[2.5rem] transition-all hover:bg-secondary-foreground hover:text-secondary text-secondary-foregroundS rounded-2xl translate-x-4" />
         </a>
@@ -92,7 +90,7 @@ export function Topbar(): React.ReactNode {
 
                     <NavigationMenuItem>
                         
-                            <a href="/#contacts" className="hover:bg-secondary-foreground text-base text-secondary-foreground font-medium px-2 py-2 rounded-xl transition-all hover:text-secondary tracking-tighter duration-200 max-h-8" title={getData(lang, "about-title")}>
+                            <a href="/#about" className="hover:bg-secondary-foreground text-base text-secondary-foreground font-medium px-2 py-2 rounded-xl transition-all hover:text-secondary tracking-tighter duration-200 max-h-8" title={getData(lang, "about-title")}>
                                 {getData(lang, "about")}
                             </a>
                        
@@ -110,7 +108,7 @@ export function Topbar(): React.ReactNode {
         <div className="flex-1 flex items-center text-center place-content-end">
             { /* <ReactCountryFlag countryCode={languages[getOtherLanguage(lang)]} svg className="text-center transition-all text-5xl hover:cursor-pointer -translate-x-7" title={getData(lang, "top-flag-title")} onClick={changeLanguage} /> */}
 
-            <TiGlobeOutline className="p-0.5 text-4xl transition-all hover:bg-secondary-foreground hover:text-secondary text-secondary-foregroundS rounded-2xl -translate-x-6" title={getData(lang, "top-flag-title")} onClick={changeLanguage}/>
+            <TiGlobeOutline className="p-0.5 text-4xl transition-all hover:bg-secondary-foreground hover:text-secondary hover:cursor-pointer text-secondary-foregroundS rounded-2xl -translate-x-6" title={getData(lang, "top-flag-title")} onClick={changeLanguage}/>
         </div>
     </div>)
 }   

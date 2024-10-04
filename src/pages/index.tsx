@@ -30,7 +30,7 @@ export function Index(): React.ReactNode {
 
     return (<>
         <Topbar />
-        <div className="bg-index flex-wrap bg-background bg-wiggle w-screen min-h-screen flex items-center flex-col place-content-center pt-16">
+        <div className="bg-index flex-wrap bg-background bg-wiggle w-screen min-h-screen flex items-center flex-col place-content-center pt-12">
             <div className="fg-index *:m-5">
                 <Card>
                     <CardHeader>
