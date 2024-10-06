@@ -18,7 +18,6 @@ module.exports = {
     extend: {
       backgroundImage: {
         'wiggle': "url('./wiggle.svg')",
-        'texture': "url('./texture.svg')",
         'hideout': "url('./hideout.svg')",
       },
       fontFamily: {
