@@ -39,9 +39,9 @@ export function Topbar(): React.ReactNode {
     }, [])
     // ---
 
-    return (<div className="fixed top-0 flex flex-row w-screen text-medium h-14 backdrop-blur-md bg-primary border-b-[3px] border-border z-10" style={{ backgroundColor: `rgba(248, 250, 252, ${opacity})` }}>
-        <a className="flex-1 flex items-center text-5xl place-content-center" href="/#" title={getData(lang, "top-main-title")}>
-            <TiScissorsOutline className="p-1 transition-all hover:bg-primary-foreground hover:text-primary text-primary-foreground rounded-2xl" />
+    return (<div className="fixed top-0 flex flex-row w-screen text-medium text-secondary-foreground h-12 backdrop-blur-sm bg-secondary border-b-[3px] z-10" style={{ backgroundColor: `rgba(30, 41, 59, ${opacity})` }}>
+        <a className="flex-1 flex items-center  place-content-start" href="/#" title={getData(lang, "top-main-title")}>
+            <TiScissorsOutline className="p-0.5 text-[2.5rem] transition-all hover:bg-secondary-foreground hover:text-secondary text-secondary-foregroundS rounded-2xl translate-x-4" />
         </a>
         <div className="flex-1 flex items-center flex-grow p-3 text-lg text-center place-content-center">
 
@@ -53,8 +53,10 @@ export function Topbar(): React.ReactNode {
 
 
 
-        <div className="flex-1 flex items-center text-center place-content-center">
-            <ReactCountryFlag countryCode={languages[getOtherLanguage(lang)]} svg className="text-center transition-all text-5xl hover:cursor-pointer" title={getData(lang, "top-flag-title")} onClick={changeLanguage} />
+        <div className="flex-1 flex items-center text-center place-content-end">
+            { /* <ReactCountryFlag countryCode={languages[getOtherLanguage(lang)]} svg className="text-center transition-all text-5xl hover:cursor-pointer -translate-x-7" title={getData(lang, "top-flag-title")} onClick={changeLanguage} /> */}
+
+            <TiGlobeOutline className="p-0.5 text-4xl transition-all hover:bg-secondary-foreground hover:text-secondary hover:cursor-pointer text-secondary-foregroundS rounded-2xl -translate-x-6" title={getData(lang, "top-flag-title")} onClick={changeLanguage}/>
         </div>
     </div>)
 }   

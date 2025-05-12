@@ -19,6 +19,9 @@ async function initializeApp() {
   },{
     path: "/contacts",
     element: (<App title='contacts-title' content={<Contacts/>}  />)
+  },{
+    path: "/about",
+    element: (<App title='about-title' content={<About/>}  />)
   }])
 
   ReactDOM.createRoot(document.getElementById('root')!).render(

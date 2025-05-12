@@ -23,35 +23,43 @@ export function Index(): React.ReactNode {
 
     return (<>
         <Topbar />
-        <div className="bg-index flex-wrap  w-screen min-h-screen flex items-center flex-col place-content-center bg-background bg-wiggle pt-16">
-            <div className="fg-index">
+        <div className="bg-index flex-wrap bg-background bg-wiggle w-screen min-h-screen flex items-center flex-col place-content-center pt-12">
+            <div className="fg-index *:m-5">
                 <Card>
-                    <div className="flex flex-wrap flex-col items-center w-[65vw]">
+                    <CardHeader>
+                        <CardTitle>{getData(lang, "gypsy-title")}</CardTitle>
 
-                        <div className=" text-center text-wrap">
-                            <div className="text-3xl">{getData(lang, "gypsy-title")}</div>
-                            <div>{getData(lang, "gypsy-description")}</div>
-                        </div>
-                        <hr className="w-full my-2" />
+                    </CardHeader>
+
+                    <CardContent>
                         <iframe src="https://www.youtube.com/embed/XkUINTHkFQg?si=TTqHGHkbPQSEU7QP" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="rounded-xl mt-2 w-[65vw] h-[30vw]" ></iframe>
-
-
-                    </div>
+                    </CardContent>
+                    <CardFooter>
+                        <div>{getData(lang, "gypsy-description")}</div>
+                    </CardFooter>
                 </Card>
 
                 <Card>
-                    <div className="flex flex-wrap flex-col items-center">
+                    <CardHeader>
+                        <CardTitle>{getData(lang, "those-title")}</CardTitle>
 
-                        <div className=" text-center text-wrap">
-                            <div className="text-3xl">{getData(lang, "those-title")}</div>
-                            <div>{getData(lang, "those-description")}</div>
-                        </div>
-                        <hr className="w-full my-2" />
+                    </CardHeader>
 
+                    <CardContent>
                         <iframe src={getData(lang, "those-link")} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="rounded-xl mt-2 w-[65vw] h-[30vw]" ></iframe>
+                    </CardContent>
+                    <CardFooter>
+                        <div>{getData(lang, "those-description")}</div>
+                    </CardFooter>
 
 
-                    </div>
+
+
+
+
+
+
+
                 </Card>
             </div>
         </div>
