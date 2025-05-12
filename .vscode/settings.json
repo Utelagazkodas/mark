@@ -1,28 +1,23 @@
 {
+    "editor.defaultFormatter": "svelte.svelte-vscode",
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
     "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/Thumbs.db": true,
-        "**/node_modules": true,
-        "**/.eslintrc.cjs": true,
-        "**/package-lock.json": true,
-        "**/package.json": true,
-        "**/README.md": true,
-        "**/.gitignore": true,
-        "**/tsconfig.json": true,
-        "**/tsconfig.tsbuildinfo": true,
-        "**/.triplex": true,
-        "**/.vscode": true,
-        "**/docs": true,
-        "**/tsconfig.node.json": true,
-        "**/vite.config.ts": true,
-        "**/vite-env.d.ts": true,
-        "**/CNAME": true,
-        "**/404.html": true,
-        "**/favicon.ico": true
+        "**/.git": false,
+        "**/.svn": false,
+        "**/.hg": false,
+        "**/CVS": false,
+        "**/.DS_Store": false,
+        "**/Thumbs.db": false,
+        "**/**.config.js": false,
+        "**/**.json": false,
+        ".npmrc": false,
+        "README.md": false,
+        "**/.gitignore": false,
+        "**/vite.config.ts": false,
+        "**/node_modules": false,
+        "**/.svelte-kit": false
     },
     "explorerExclude.backup": {}
 }
