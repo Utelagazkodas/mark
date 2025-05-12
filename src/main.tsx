@@ -7,6 +7,7 @@ import { Index } from './pages/index.tsx'
 import { initializeLanguages } from './utility/language.ts'
 import { Contacts } from './pages/contacts.tsx'
 import { Page404 } from './pages/404.tsx'
+import { About } from './pages/about.tsx'
 
 
 async function initializeApp() {

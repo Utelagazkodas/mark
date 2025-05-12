@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { TiScissorsOutline } from "react-icons/ti";
+import { TiGlobeOutline, TiScissorsOutline } from "react-icons/ti";
 import ReactCountryFlag from "react-country-flag";
 import { changeLanguage, changeLanguageFunctions, currentLanguage, getData, getOtherLanguage, languages } from "../utility/language.ts";
 
