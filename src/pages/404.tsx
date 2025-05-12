@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Topbar } from "../components/topbar";
-import { changeLanguageFunctions, currentLanguage, getData } from "../utility/language";
+import { changeLanguageFunctions, currentLanguage, getData } from "../utility/language.ts";
 
 export function Page404() : React.ReactNode{
 

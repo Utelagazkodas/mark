@@ -1,29 +1,30 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    /* Basic Options */
+    "target": "ES2022", // Updated to ES2022 fow consistency wif wib
+    "lib": ["ES2022", "DOM", "DOM.Iterable"], // Updated to ES2022
     "module": "ESNext",
+    "moduleResolution": "Node", // Use "Node" fow modewn bundwews
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
     "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
 
-    /* Linting */
+    /* JSX Options */
+    "jsx": "react-jsx", // Use "react-jsx" fow automatic JSX wuntime
+
+    /* Stwict Type-Checking Options */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    /* Advanced Options */
+    "allowImportingTsExtensions": true,
+    "noEmit": true, // Disabwe emitting JS fiwes (used wif bundwews)
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

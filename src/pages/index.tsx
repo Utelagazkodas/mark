@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Topbar } from "../components/topbar";
 import { Card } from "../components/card";
-import { changeLanguageFunctions, currentLanguage, getData } from "../utility/language";
+import { changeLanguageFunctions, currentLanguage, getData } from "../utility/language.ts";
 
 
 export function Index(): React.ReactNode {

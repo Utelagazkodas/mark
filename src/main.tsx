@@ -1,16 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { App } from './App.tsx'
-import './index.css'
+import '../index.css'
 import { createHashRouter, RouterProvider } from 'react-router-dom'
 import { Index } from './pages/index.tsx'
-import { initializeLanguages } from './utility/language.tsx'
+import { initializeLanguages } from './utility/language.ts'
 import { Contacts } from './pages/contacts.tsx'
 import { Page404 } from './pages/404.tsx'
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+
 
 async function initializeApp() {
   await initializeLanguages()

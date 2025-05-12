@@ -1,20 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { TiScissorsOutline } from "react-icons/ti";
 import ReactCountryFlag from "react-country-flag";
-import { changeLanguage, changeLanguageFunctions, currentLanguage, getData, getOtherLanguage, languages } from "../utility/language";
+import { changeLanguage, changeLanguageFunctions, currentLanguage, getData, getOtherLanguage, languages } from "../utility/language.ts";
 
-import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuIndicator,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-    NavigationMenuViewport,
-} from "./ui/navigation-menu"
 
-import { Button } from "./ui/button";
 
 export function Topbar(): React.ReactNode {
     // create lang
@@ -59,38 +48,6 @@ export function Topbar(): React.ReactNode {
 
 
 
-
-            <NavigationMenu>
-                <NavigationMenuList >
-
-                    <NavigationMenuItem>
-                        <NavigationMenuTrigger className="bg-transparent rounded-xl text-primary-foreground text-base tracking-tighter max-h-8 py-1 hover:bg-transparent hover:text-primary-foreground focus:bg-transparent focus:text-primary-foreground data-[active]:bg-transparent data-[state=open]:bg-transparent">
-                            Projects
-                        </NavigationMenuTrigger>
-                        <NavigationMenuContent className="text-medium h-[8vw] bg-primary rounded-xl text-primary-foreground border">
-                            
-                                asdasd
-                           
-                        </NavigationMenuContent>
-                    </NavigationMenuItem>
-
-                    <NavigationMenuItem>
-                        
-                            <a href="/#contacts" className="hover:bg-primary-foreground text-base text-primary-foreground font-medium px-2 py-1 rounded-xl transition-all hover:text-primary tracking-tighter duration-200 max-h-8" title={getData(lang, "contacts-title")}>
-                                {getData(lang, "contact")}
-                            </a>
-                       
-                    </NavigationMenuItem>
-
-                    <NavigationMenuItem>
-                        
-                            <a href="/#contacts" className="hover:bg-primary-foreground text-base text-primary-foreground font-medium px-2 py-1 rounded-xl transition-all hover:text-primary tracking-tighter duration-200 max-h-8" title={getData(lang, "about-title")}>
-                                {getData(lang, "about")}
-                            </a>
-                       
-                    </NavigationMenuItem>
-                </NavigationMenuList>
-            </NavigationMenu>
 
         </div>
 
