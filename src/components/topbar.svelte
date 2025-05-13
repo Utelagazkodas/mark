@@ -6,7 +6,7 @@
 
   import Icon from "@iconify/svelte";
 
-  import Drawer from "svelte-drawer-component";
+  import Drawer from "./Drawer.svelte";
   let open = false;
 </script>
 
@@ -27,7 +27,7 @@
     <div class="ml-3 w-[32px] h-[32px]"></div>
 
     <div class="flex-1 text-center">Márk Károlyi hair</div>
-    
+
     <button
       class="mr-3 hover:cursor-pointer"
       on:click={() => {
@@ -35,8 +35,8 @@
       }}
       ><Icon
         icon="material-symbols:menu-rounded"
-        width="32"
-        height="32"
+        width="32px"
+        height="32px"
       /></button
     >
   {/if}
@@ -49,6 +49,9 @@
     open = false;
   }}
   placement={"right"}
+  
 >
-  <button on:click={() => (open = false)}>Close</button>
+  
+    asd
+  
 </Drawer>

@@ -6,16 +6,22 @@
   let { children } = $props();
 
   onMount(() => {
-    window.name = "asd";
+    
   });
 
   let contentDiv : HTMLDivElement
 </script>
 
+<svelte:head>
+	<title>Márk Károlyi Hair</title>
+</svelte:head>
+
 <div bind:this={contentDiv} class="overflow-y-scroll h-screen overflow-x-hidden hide-scrollbar">
   <Topbar />
 
-  <div >
+  <div class="">
     {@render children()}
   </div>
+
+  
 </div>
