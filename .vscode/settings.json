@@ -4,20 +4,27 @@
         "editor.defaultFormatter": "vscode.css-language-features"
     },
     "files.exclude": {
-        "**/.git": false,
-        "**/.svn": false,
-        "**/.hg": false,
-        "**/CVS": false,
-        "**/.DS_Store": false,
-        "**/Thumbs.db": false,
-        "**/**.config.js": false,
-        "**/**.json": false,
-        ".npmrc": false,
-        "README.md": false,
-        "**/.gitignore": false,
-        "**/vite.config.ts": false,
-        "**/node_modules": false,
-        "**/.svelte-kit": false
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/**.config.js": true,
+        "**/**.json": true,
+        ".npmrc": true,
+        "README.md": true,
+        "**/.gitignore": true,
+        "**/vite.config.ts": true,
+        "**/node_modules": true,
+        "**/.svelte-kit": true,
+        "**/docs": true,
+        "**/.vscode": true,
+        "**/svelte.config.js": true,
+        "**/tsconfig.tsbuildinfo": true
     },
-    "explorerExclude.backup": {}
+    "explorerExclude.backup": {},
+    "[svelte]": {
+        "editor.defaultFormatter": "svelte.svelte-vscode"
+    }
 }
