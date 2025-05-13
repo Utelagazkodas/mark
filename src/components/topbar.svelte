@@ -17,12 +17,19 @@
   bind:outerHeight
 />
 
-<div class="w-screen h-12 flex items-center absolute">
+<div
+  class="w-screen h-12 flex items-center sticky top-0 bg-white/50 backdrop-blur-sm border-b"
+>
   {#if innerHeight < innerWidth && false}
     gép
   {:else}
-    <button
+    <!--IGNORE THIS NOT, MY FINEST WORK, this is so that the text is in the middle-->
+    <div class="ml-3 w-[32px] h-[32px]"></div>
+
+    <div class="flex-1 text-center">Márk Károlyi hair</div>
     
+    <button
+      class="mr-3 hover:cursor-pointer"
       on:click={() => {
         open = true;
       }}
@@ -32,12 +39,16 @@
         height="32"
       /></button
     >
-    <div class="flex-1 text-center">
-        Márk Károlyi hair
-    </div>
   {/if}
 </div>
 
-<Drawer {open} size="75vw" on:clickAway={()=>{open=false}}>
+<Drawer
+  {open}
+  size="75vw"
+  on:clickAway={() => {
+    open = false;
+  }}
+  placement={"right"}
+>
   <button on:click={() => (open = false)}>Close</button>
 </Drawer>
