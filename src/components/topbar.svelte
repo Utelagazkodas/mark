@@ -1,26 +1,28 @@
-<script>
-  $: outerWidth = 0;
+<script lang="ts">
   $: innerWidth = 0;
-  $: outerHeight = 0;
   $: innerHeight = 0;
 
   import Icon from "@iconify/svelte";
 
   import Drawer from "./Drawer.svelte";
+  import { isMobile } from "$lib";
   let open = false;
+
+  let TopBarComponent : HTMLDivElement
+  
+
 </script>
 
 <svelte:window
   bind:innerWidth
-  bind:outerWidth
   bind:innerHeight
-  bind:outerHeight
 />
 
 <div
-  class="w-screen h-12 flex items-center sticky top-0 bg-white/50 backdrop-blur-sm border-b"
+  bind:this={TopBarComponent}
+  class="w-screen h-12 flex items-center absolute top-0 backdrop-blur-xs border-b bg-white/60"
 >
-  {#if innerHeight < innerWidth && false}
+  {#if !isMobile(innerWidth ,innerHeight)}
     gép
   {:else}
     <!--IGNORE THIS NOT, MY FINEST WORK, this is so that the text is in the middle-->

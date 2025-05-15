@@ -37,9 +37,10 @@
 
     <!-- svelte-ignore a11y_click_events_have_key_events -->
     <!-- svelte-ignore a11y_no_static_element_interactions -->
+    <!-- svelte-ignore element_invalid_self_closing_tag -->
     <div class="overlay" on:click={handleClickAway} />
 
-    <div class="panel {placement}" class:size>
+    <div class="panel {placement}  bg-white/60 backdrop-blur-xs" class:size>
         
         <slot />
     </div>
