@@ -40,7 +40,7 @@
     <!-- svelte-ignore element_invalid_self_closing_tag -->
     <div class="overlay" on:click={handleClickAway} />
 
-    <div class="panel {placement}  bg-white/60 backdrop-blur-xs" class:size>
+    <div class="panel {placement}" class:size>
         
         <slot />
     </div>
@@ -70,7 +70,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(100, 100, 100, 0.5);
+        background: rgba(100, 100, 100, 0.8);
         opacity: 0;
         z-index: 2;
         transition: opacity var(--duration) ease;

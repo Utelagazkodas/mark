@@ -5,11 +5,14 @@
   import Icon from "@iconify/svelte";
 
   import Drawer from "./Drawer.svelte";
-  import { isMobile } from "$lib";
+  import { isMobile, scroll } from "$lib";
   let open = false;
 
   let TopBarComponent : HTMLDivElement
   
+  scroll.subscribe((value)=>{
+    TopBarComponent.style.opacity = "0"
+  })
 
 </script>
 
@@ -20,6 +23,7 @@
 
 <div
   bind:this={TopBarComponent}
+
   class="w-screen h-12 flex items-center absolute top-0 backdrop-blur-xs border-b bg-white/60"
 >
   {#if !isMobile(innerWidth ,innerHeight)}
@@ -54,6 +58,10 @@
   
 >
   
-    asd
+    <div class="h-screen w-full bg-white/35 backdrop-blur-xs relative">
+        <button class="absolute top-3 right-3 hover:cursor-pointer" on:click={()=>{open=false}}>
+          <Icon icon="material-symbols:close-rounded" width="32" height="32" />
+        </button>
+    </div>
   
 </Drawer>

@@ -13,5 +13,5 @@ export function setScroll(value: number){
 }
 
 export function isMobile(width : number, height : number): boolean{
-    return width < height || width < 500
+    return width < height || width < 500 || true
 }
