@@ -7,15 +7,15 @@
   import Drawer from "./Drawer.svelte";
   import { isMobile, scroll } from "$lib";
   import { onMount } from "svelte";
-  let open = false;
+  let drawerOpen = false;
+
+  let workOpen = false;
 
   let TopBarComponent: HTMLDivElement;
 
   onMount(() => {
     scroll.subscribe((value) => {
       TopBarComponent.style.opacity = `${value / 30}`;
-
-     
     });
   });
 </script>
@@ -36,12 +36,10 @@
 
     <button
       class={`mr-3 clickable-on-scroll ${$scroll > 0 ? "hover:cursor-pointer" : ""}`}
-
-      on:click={() => {
-        open = true;
+      onclick={() => {
+        drawerOpen = true;
       }}
       ><Icon
-      
         icon="material-symbols:menu-rounded"
         width="32px"
         height="32px"
@@ -51,19 +49,35 @@
 </div>
 
 <Drawer
-  {open}
+  open={drawerOpen}
   size="75vw"
   on:clickAway={() => {
-    open = false;
+    drawerOpen = false;
   }}
   placement={"right"}
   duration={0.2}
 >
   <div class="h-screen w-full bg-white/35 backdrop-blur-xs relative">
+    <button class="hover:cursor-pointer" onclick={()=>{workOpen = !workOpen}}> My Works </button>
+    <div style={`display: ${workOpen ? "" : "none"};`}>
+      <a href=""> Movies </a>
+
+      <a
+        href="
+      "
+      >
+        Commercials</a
+      >
+      <a
+        href="
+      ">Fashion</a
+      >
+    </div>
+    <a href=""> Contact </a>
     <button
       class="absolute top-3 right-3 hover:cursor-pointer"
-      on:click={() => {
-        open = false;
+      onclick={() => {
+        drawerOpen = false;
       }}
     >
       <Icon icon="material-symbols:close-rounded" width="32" height="32" />
