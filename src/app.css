@@ -11,3 +11,22 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+
+  .scroll-bg{
+    height: 100vh;
+    width: 3420px;
+    background: url("./bg.jpg") repeat-x;
+    position: absolute;
+    z-index: -10;
+    animation: slide 30s linear infinite;
+    background-size: auto 100%;
+  }
+
+  @keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1140px, 0, 0); /* The image width */
+  }
+} 

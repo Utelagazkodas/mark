@@ -15,7 +15,7 @@
     scroll.subscribe((value) => {
       TopBarComponent.style.opacity = `${value / 30}`;
 
-      TopBarComponent.style.zIndex = value == 0 ? "-100" : "10"
+     
     });
   });
 </script>
@@ -24,7 +24,7 @@
 
 <div
   bind:this={TopBarComponent}
-  class="w-screen h-12 flex items-center absolute top-0 backdrop-blur-xs border-b bg-white/60 transition-all duration-200 opacity-0"
+  class="w-screen h-12 flex items-center absolute top-0 backdrop-blur-xs border-b z-10 bg-white/60 transition-all duration-200 opacity-0"
 >
   {#if !isMobile(innerWidth, innerHeight)}
     gép
