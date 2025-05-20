@@ -39,6 +39,6 @@
 
 <hr>
 
-<div class="h-screen bg-gray-100/70 backdrop-blur-lg">
+<div class="h-screen bg-gray-100/70 backdrop-blur-lg" id="contact">
 
 </div>

@@ -74,7 +74,7 @@
       <div style={`${workOpen ? "" : "display: none"};`} class="px-4">
         <hr />
         <a
-          href="/#movies"
+          href="/works#movies"
           onclick={() => {
             drawerOpen = false;
           }}
@@ -84,7 +84,7 @@
         <hr />
 
         <a
-          href="/#commercials
+          href="/works#commercials
       "
           onclick={() => {
             drawerOpen = false;
@@ -94,7 +94,7 @@
         >
         <hr />
         <a
-          href="/#fashion
+          href="/works#fashion
       "
           onclick={() => {
             drawerOpen = false;
@@ -103,7 +103,7 @@
       </div>
       <hr />
       <a
-        href="#contact"
+        href="/#contact"
         onclick={() => {
           drawerOpen = false;
         }}

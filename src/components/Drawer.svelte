@@ -17,8 +17,6 @@
         if (mounted) {
             const body = document.querySelector("body");
             body!.style.overflow = open ? 'hidden' : 'auto'
-
-
         }
     }
 
