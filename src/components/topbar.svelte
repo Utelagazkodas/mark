@@ -57,23 +57,60 @@
   placement={"right"}
   duration={0.2}
 >
-  <div class="h-screen w-full bg-white/35 backdrop-blur-xs relative">
-    <button class="hover:cursor-pointer" onclick={()=>{workOpen = !workOpen}}> My Works </button>
-    <div style={`display: ${workOpen ? "" : "none"};`}>
-      <a href=""> Movies </a>
+  <div
+    class="h-screen w-full bg-white/35 backdrop-blur-xs relative text-center text-xl"
+  >
+    <div class="h-screen w-full px-14">
+      <button
+        class="hover:cursor-pointer "
+        onclick={() => {
+          workOpen = !workOpen;
+        }}
+      >
+        My Works
+        <Icon icon="material-symbols:arrow-back-ios-new-rounded" width="24" height="24" style={`transform: rotate(${workOpen ?  "90deg" : "-90deg"});`} class="inline transition-all"/>
+      </button>
 
-      <a
-        href="
+      <div style={`${workOpen ? "" : "display: none"};`} class="px-4">
+        <hr />
+        <a
+          href="/#movies"
+          onclick={() => {
+            drawerOpen = false;
+          }}
+        >
+          Movies
+        </a>
+        <hr />
+
+        <a
+          href="/#commercials
       "
-      >
-        Commercials</a
-      >
+          onclick={() => {
+            drawerOpen = false;
+          }}
+        >
+          Commercials</a
+        >
+        <hr />
+        <a
+          href="/#fashion
+      "
+          onclick={() => {
+            drawerOpen = false;
+          }}>Fashion</a
+        >
+      </div>
+      <hr />
       <a
-        href="
-      ">Fashion</a
+        href="#contact"
+        onclick={() => {
+          drawerOpen = false;
+        }}
       >
+        Contact
+      </a>
     </div>
-    <a href=""> Contact </a>
     <button
       class="absolute top-3 right-3 hover:cursor-pointer"
       onclick={() => {

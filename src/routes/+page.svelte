@@ -18,11 +18,6 @@
 
 <div class="h-screen relative flex justify-center place-items-center select-none">
   <div class="text-center flex flex-col justify-center items-center bg-gray-200/60 backdrop-blur-md rounded-2xl p-3">
-    <img
-      src="./profile.jpg"
-      alt="Profile"
-      class="rounded-full aspect-square md:w-[25vw] w-[40vw] m-6"
-    />
     <div>
       <div class="text-4xl md:text-6xl ">Márk Károlyi</div>
       <div class="text-3xl md:text-5xl font-light text-gray-600">

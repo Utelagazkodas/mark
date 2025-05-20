@@ -17,7 +17,7 @@
 	<title>Márk Károlyi Hair</title>
 </svelte:head>
 
-<div bind:this={contentDiv} class="overflow-y-scroll h-screen overflow-x-hidden hide-scrollbar w-screen" onscroll={(event)=>{scroll.set(event.currentTarget.scrollTop)}}>
+<div bind:this={contentDiv} class="overflow-y-scroll h-screen overflow-x-hidden hide-scrollbar w-screen" onscroll={(event)=>{scroll.set(event.currentTarget.scrollTop)}} id="content">
   <Topbar />
 
   <div class="">

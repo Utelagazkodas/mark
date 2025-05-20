@@ -25,6 +25,7 @@
   overflow: hidden;
   will-change: transform;
   backface-visibility: hidden;
+  
 }
 
 @keyframes slide {

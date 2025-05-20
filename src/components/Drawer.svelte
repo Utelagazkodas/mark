@@ -17,6 +17,8 @@
         if (mounted) {
             const body = document.querySelector("body");
             body!.style.overflow = open ? 'hidden' : 'auto'
+
+
         }
     }
 
@@ -53,8 +55,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
         z-index: -1;
         transition: z-index var(--duration) step-end;
     }
@@ -68,8 +70,8 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         background: rgba(100, 100, 100, 0.8);
         opacity: 0;
         z-index: 2;
@@ -81,7 +83,7 @@
     }
 
     .panel {
-        position: fixed;
+        position: absolute;
         width: 100%;
         height: 100%;
 
