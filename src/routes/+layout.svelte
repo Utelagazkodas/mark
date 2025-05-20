@@ -8,6 +8,7 @@
 
   onMount(() => {
     maxScroll.set(contentDiv.scrollHeight)
+    scroll.set(contentDiv.scrollTop)
   });
 
   let contentDiv : HTMLDivElement

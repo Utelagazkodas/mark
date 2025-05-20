@@ -30,9 +30,11 @@
     gép
   {:else}
     <!--IGNORE THIS NOT, MY FINEST WORK, this is so that the text is in the middle-->
-    <div class="ml-3 w-[32px] h-[32px]"></div>
+    <a class="ml-3 hover:cursor-pointer" href="/">
+      <Icon icon="material-symbols:arrow-back-ios-new-rounded" height="24" width="24" />
+    </a>
 
-    <div class="flex-1 text-center">Márk Károlyi hair</div>
+    <div class="flex-1 text-center">Márk Károlyi Hair</div>
 
     <button
       class={`mr-3 clickable-on-scroll ${$scroll > 0 ? "hover:cursor-pointer" : ""}`}
