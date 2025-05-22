@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Már</title>
+	<title>Márk Károlyi Hair - works</title>
 </svelte:head>
 
 <div class="*:h-screen">

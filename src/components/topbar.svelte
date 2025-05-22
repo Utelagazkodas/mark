@@ -7,6 +7,7 @@
   import Drawer from "./Drawer.svelte";
   import { isMobile, scroll } from "$lib";
   import { onMount } from "svelte";
+    import BackButton from "./BackButton.svelte";
   let drawerOpen = false;
 
   let workOpen = false;
@@ -29,10 +30,7 @@
   {#if !isMobile(innerWidth, innerHeight)}
     gép
   {:else}
-    <!--IGNORE THIS NOT, MY FINEST WORK, this is so that the text is in the middle-->
-    <a class="ml-3 hover:cursor-pointer" href="/">
-      <Icon icon="material-symbols:arrow-back-ios-new-rounded" height="24" width="24" />
-    </a>
+    <BackButton/>
 
     <div class="flex-1 text-center">Márk Károlyi Hair</div>
 
@@ -64,13 +62,19 @@
   >
     <div class="h-screen w-full px-14">
       <button
-        class="hover:cursor-pointer "
+        class="hover:cursor-pointer"
         onclick={() => {
           workOpen = !workOpen;
         }}
       >
         My Works
-        <Icon icon="material-symbols:arrow-back-ios-new-rounded" width="24" height="24" style={`transform: rotate(${workOpen ?  "90deg" : "-90deg"});`} class="inline transition-all"/>
+        <Icon
+          icon="material-symbols:arrow-back-ios-new-rounded"
+          width="24"
+          height="24"
+          style={`transform: rotate(${workOpen ? "90deg" : "-90deg"});`}
+          class="inline transition-all"
+        />
       </button>
 
       <div style={`${workOpen ? "" : "display: none"};`} class="px-4">
