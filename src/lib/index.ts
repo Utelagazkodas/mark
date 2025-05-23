@@ -4,8 +4,6 @@ export let scroll : Writable<number> = writable(0)
 export let maxScroll : Writable<number> = writable()
 export let highestScroll : Writable<number> = writable(0)
 
-export let pathName : Writable<string> = writable("/")
-
 export function setScroll(value: number){
     scroll.set(value)
 

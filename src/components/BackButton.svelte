@@ -1,10 +1,10 @@
 <script>
     import Icon from "@iconify/svelte";
+    import { page } from "$app/state";
 
-    export let pathName = "/"
 </script>
 
-{#if pathName != "/"}
+{#if page.url.pathname != "/"}
     <a
         class="ml-3 hover:cursor-pointer w-[32px] h-[32px] flex items-center"
         href="/"
