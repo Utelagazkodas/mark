@@ -12,6 +12,7 @@
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+  scroll-behavior: smooth;
 }
 
 .scroll-bg {
@@ -20,11 +21,11 @@
   background: url("/bg.jpg") repeat-x;
   position: absolute;
   z-index: -10;
-  animation: slide 10s linear infinite;
+  animation: slide 20s linear infinite;
   overflow: hidden;
   will-change: transform;
   backface-visibility: hidden;
-  background-size: contain;
+  background-size: 3420px contain;
 }
 
 

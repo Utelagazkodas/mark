@@ -9,8 +9,6 @@
   let { children } = $props();
 
   onMount(() => {
-
-
     //sets scroll amounts
     maxScroll.set(contentDiv.scrollHeight);
     scroll.set(contentDiv.scrollTop);
@@ -28,12 +26,11 @@
   class="overflow-y-scroll h-screen overflow-x-hidden hide-scrollbar w-screen max-h-screen max-w-screen"
   onscroll={(event) => {
     scroll.set(event.currentTarget.scrollTop);
+    maxScroll.set(contentDiv.scrollHeight);
   }}
   id="content"
 >
   <Topbar />
 
- 
-    {@render children()}
-  
+  {@render children()}
 </div>
