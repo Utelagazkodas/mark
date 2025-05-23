@@ -5,9 +5,10 @@
   import Icon from "@iconify/svelte";
 
   import Drawer from "./Drawer.svelte";
-  import { isMobile, scroll } from "$lib";
+  import { isMobile, pathName, scroll } from "$lib";
   import { onMount } from "svelte";
     import BackButton from "./BackButton.svelte";
+    import { get } from "svelte/store";
   let drawerOpen = false;
 
   let workOpen = false;
@@ -30,7 +31,7 @@
   {#if !isMobile(innerWidth, innerHeight)}
     gép
   {:else}
-    <BackButton/>
+    <BackButton pathName={$pathName}/>
 
     <div class="flex-1 text-center">Márk Károlyi Hair</div>
 
