@@ -25,7 +25,7 @@
 
 <div
   bind:this={contentDiv}
-  class="overflow-y-scroll h-screen overflow-x-hidden hide-scrollbar w-screen"
+  class="overflow-y-scroll h-screen overflow-x-hidden hide-scrollbar w-screen max-h-screen max-w-screen"
   onscroll={(event) => {
     scroll.set(event.currentTarget.scrollTop);
   }}
@@ -33,7 +33,7 @@
 >
   <Topbar />
 
-  <div class="">
+ 
     {@render children()}
-  </div>
+  
 </div>

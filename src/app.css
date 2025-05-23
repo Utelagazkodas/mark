@@ -21,12 +21,13 @@
   position: absolute;
   z-index: -10;
   animation: slide 10s linear infinite;
-  background-size: 1140px 100%;
   overflow: hidden;
   will-change: transform;
   backface-visibility: hidden;
-  
+  background-size: contain;
 }
+
+
 
 @keyframes slide {
   0% {
