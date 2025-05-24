@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Topbar from "../components/topbar.svelte";
+  import Topbar from "../components/TopBar.svelte";
   import "../app.css";
   import { onMount } from "svelte";
   import { maxScroll, scroll } from "$lib";
