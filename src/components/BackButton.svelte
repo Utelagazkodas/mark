@@ -7,7 +7,7 @@
 {#if page.url.pathname != "/"}
     <a
         class="ml-3 hover:cursor-pointer w-[32px] h-[32px] flex items-center"
-        href="/"
+        href="/#index"
     >
         <Icon
             icon="material-symbols:arrow-back-ios-new-rounded"

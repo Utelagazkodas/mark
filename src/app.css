@@ -15,7 +15,7 @@
   scroll-behavior: smooth;
 }
 
-.scroll-bg {
+.scroll-bg-index {
   height: 100vh;
   width: 3420px;
   background: url("/bg.jpg") repeat-x;

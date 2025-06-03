@@ -10,7 +10,7 @@
 			<slot name="head"></slot>	
 		</div>
 		
-		<button on:click={handleClick} >
+		<button on:click={handleClick} class="absolute">
 			+/-
 		</button>
 	</div>
@@ -24,9 +24,7 @@
 </div>
 
 <style>
-	div.accordion {
-		margin: 1rem 0;
-	}
+
 	
 	div.header {
 		display:flex;
@@ -35,11 +33,6 @@
 	
 	div.header .text {
 		flex: 1;
-		margin-right: 5px;
 	}
 	
-	div.details {
-		background-color: #cecece;
-		padding:1rem;
-	}
 </style>

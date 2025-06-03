@@ -7,11 +7,10 @@
   import Drawer from "./Drawer.svelte";
   import { isMobile, scroll } from "$lib";
   import { onMount } from "svelte";
-    import BackButton from "./BackButton.svelte";
-    import { get } from "svelte/store";
+  import BackButton from "./BackButton.svelte";
+  import { get } from "svelte/store";
+  import Accordion from "./Accordion.svelte";
   let drawerOpen = false;
-
-  let workOpen = false;
 
   let TopBarComponent: HTMLDivElement;
 
@@ -31,7 +30,7 @@
   {#if !isMobile(innerWidth, innerHeight)}
     gép
   {:else}
-    <BackButton/>
+    <BackButton />
 
     <div class="flex-1 text-center">Márk Károlyi Hair</div>
 
@@ -62,69 +61,26 @@
     class="h-screen w-full bg-white/35 backdrop-blur-xs relative text-center text-xl"
   >
     <div class="h-screen w-full px-14">
-      <button
-        class="hover:cursor-pointer"
-        onclick={() => {
-          workOpen = !workOpen;
-        }}
-      >
-        My Works
-        <Icon
-          icon="material-symbols:arrow-back-ios-new-rounded"
-          width="24"
-          height="24"
-          style={`transform: rotate(${workOpen ? "90deg" : "-90deg"});`}
-          class="inline transition-all"
-        />
-      </button>
-
-      <div style={`${workOpen ? "" : "display: none"};`} class="px-4">
-        <hr />
-        <a
-          href="/works#movies"
-          onclick={() => {
-            drawerOpen = false;
-          }}
-        >
-          Movies
-        </a>
-        <hr />
-
-        <a
-          href="/works#commercials
-      "
-          onclick={() => {
-            drawerOpen = false;
-          }}
-        >
-          Commercials</a
-        >
-        <hr />
-        <a
-          href="/works#fashion
-      "
-          onclick={() => {
-            drawerOpen = false;
-          }}>Fashion</a
-        >
-      </div>
-      <hr />
       <a
-        href="/#contact"
+        href="/#contacts"
+        onclick={() => {
+          drawerOpen = false;
+        }}>Contacts</a
+      >
+      <div class="overflow-clip">
+        <Accordion>
+          <div slot="head">works</div>
+          <div slot="details">1</div>
+        </Accordion>
+      </div>
+      <button
+        class="absolute top-3 right-3 hover:cursor-pointer"
         onclick={() => {
           drawerOpen = false;
         }}
       >
-        Contact
-      </a>
+        <Icon icon="material-symbols:close-rounded" width="32" height="32" />
+      </button>
     </div>
-    <button
-      class="absolute top-3 right-3 hover:cursor-pointer"
-      onclick={() => {
-        drawerOpen = false;
-      }}
-    >
-      <Icon icon="material-symbols:close-rounded" width="32" height="32" />
-    </button>
-  </div>
-</Drawer>
+  </div></Drawer
+>
