@@ -69,8 +69,14 @@
       >
       <div class="overflow-clip">
         <Accordion>
-          <div slot="head">works</div>
-          <div slot="details">1</div>
+          <svelte:fragment slot="head">Works</svelte:fragment>
+          <svelte:fragment slot="details">
+            <a href="/#movies">Movies</a>
+            <br>
+            <a href="/#commercials">Commercials</a>
+            <br>
+            <a href="/#fashion">Fashion</a>
+          </svelte:fragment>
         </Accordion>
       </div>
       <button
